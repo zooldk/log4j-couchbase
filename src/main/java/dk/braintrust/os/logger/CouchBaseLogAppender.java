@@ -9,7 +9,10 @@ import org.apache.log4j.spi.LoggingEvent;
 
 import com.couchbase.client.CouchbaseClient;
 
-
+/**
+ * @author Steffen Larsen (slarsen@braintrust.dk)
+ *
+ */
 public class CouchBaseLogAppender extends AppenderSkeleton {
 	private String hosts = "localhost";
 	private int port = 8092;

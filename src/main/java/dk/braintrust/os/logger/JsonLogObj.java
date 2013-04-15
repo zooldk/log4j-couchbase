@@ -2,6 +2,10 @@ package dk.braintrust.os.logger;
 
 import java.util.HashMap;
 
+/**
+ * @author Steffen Larsen (slarsen@braintrust.dk)
+ *
+ */
 public class JsonLogObj {
 	private String clazz;
 	private String loggerName;

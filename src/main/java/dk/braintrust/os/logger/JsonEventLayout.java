@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 
 /**
  * This layout is based on https://github.com/lusis/log4j-jsonevent-layout/blob/master/src/main/java/net/logstash/log4j/JSONEventLayout.java#L10
- * @author slarsen
+ * @author Steffen Larsen (slarsen@braintrust.dk)
  *
  */
 public class JsonEventLayout extends Layout {
