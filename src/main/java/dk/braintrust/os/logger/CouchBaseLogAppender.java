@@ -20,13 +20,13 @@ public class CouchBaseLogAppender extends AppenderSkeleton {
 	private String password = "";
 	private String defaultMetadataBucket = "default";
 	private Boolean developmentMode = true;
+	private int eviction = 0;
+	private CouchbaseClient client = null;
+	private static List<URI> uris = new LinkedList<URI>();
 
 	// private Map<String, String> messages; //TODO: store the log object into a
 	// temp memtable..
-	private CouchbaseClient client = null;
-
-	private static List<URI> uris = new LinkedList<URI>();
-
+	
 	@Override
 	public void activateOptions() {
 		super.activateOptions();
@@ -52,11 +52,8 @@ public class CouchBaseLogAppender extends AppenderSkeleton {
 
 	@Override
 	protected void append(LoggingEvent event) {
-		String key = event.getLoggerName() + "_" + event.getThreadName() + "_" + event.timeStamp;
-		// System.out.println(key + " persisted");
-		// TODO: find better key for couchbase lookup
-		client.add(key, 0, this.layout.format(event));
-
+		String key = "logger:" + Utils.getHostName() + "_" + event.getThreadName() + "_" + event.timeStamp;
+		client.add(key, eviction, this.layout.format(event));
 	}
 
 	public void setDefaultMetadataBucket(String defaultMetadataBucket) {

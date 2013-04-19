@@ -42,7 +42,7 @@ public class JsonEventLayout extends Layout {
 		ndc = event.getNDC();
 
 		JsonLogObj obj = new JsonLogObj();
-		obj.setHostname(getHostName());
+		obj.setHostname(Utils.getHostName());
 		obj.setMsg(event.getRenderedMessage());
 		obj.setTimestamp(event.getTimeStamp());
 		obj.setThread(event.getThreadName());
@@ -81,17 +81,6 @@ public class JsonEventLayout extends Layout {
 	@Override
 	public boolean ignoresThrowable() {
 		return false;
-	}
-
-	private String getHostName() {
-		InetAddress addr = null;
-		try {
-			addr = InetAddress.getLocalHost();
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return addr.getHostName();
 	}
 
 	private void addFieldData(String keyname, Object keyval) {
