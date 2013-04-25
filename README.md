@@ -29,5 +29,5 @@ The log will be persisted in the couchbase datastructure.
 ## Contact
 
 Steffen Larsen
-Email: zooldk@gmail.com
-IM (XMPP): zooldk@gmail.com
+Email: mailto://zooldk@gmail.com
+IM (XMPP): xmpp://zooldk@gmail.com
