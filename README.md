@@ -8,6 +8,11 @@ Version: 0.3.0
 Log4j couchbase appender, that persist logs in couchbase for easy mapping and searching in java logs.
 The appender is based on Log4j version 1.x. New version of the appender that suits the 2.x versions will be applied later.
 
+## Idea
+
+To use the force of couchbase to take structured data and make filters (map/reduce sets). In this way it should be easy to make a simple GUI that can filter and search all your log. Another idea could be to setup replication from couchbase into Elastic Search and use that for word searching and indexing/weighting of commond errors....
+
+
 ## Usage
 
 Use the logger by adding this to your maven pom.xml file:
@@ -52,6 +57,13 @@ The log will be persisted in the couchbase datastructure which will look somethi
   }
 }
 ```
+
+## TODO
+
+* Break up the json model further for the exceptions, to be able to make better maps and views in couchbase
+* Clean up code
+* Make prototype of GUI for testing out the maps and views
+* Spread out the word to get feedback
 
 ## Contact
 
