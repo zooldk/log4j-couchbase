@@ -12,11 +12,13 @@ The appender is based on Log4j version 1.x. New version of the appender that sui
 
 Use the logger by adding this to your maven pom.xml file:
 
+```xml
 <dependency>
 	<groupId>dk.braintrust.os.logger</groupId>
 	<artifactId>log4j-couchbase-logger</artifactId>
 	<version>0.3.0-SNAPSHOT</version>
 </dependency>
+```
 
 After that every time you do a log, like this:
 
