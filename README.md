@@ -10,7 +10,7 @@ The appender is based on Log4j version 1.x. New version of the appender that sui
 
 ## Idea
 
-To use the force of couchbase to take structured data and make filters (map/reduce sets). In this way it should be easy to make a simple GUI that can filter and search all your log. Another idea could be to setup replication from couchbase into Elastic Search and use that for word searching and indexing/weighting of commond errors....
+To use the force of couchbase to take structured data and make filters (map/reduce sets). In this way it should be easy to make a simple GUI that can filter and search all your log, depending of what you want to index for your GUI. Another idea could be to setup replication from couchbase into Elastic Search and use that for word searching and indexing/weighting of commond errors....
 
 
 ## Usage
