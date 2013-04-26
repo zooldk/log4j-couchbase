@@ -25,10 +25,22 @@ After adding your log4j into your classpath or pom.xml, you should add this log 
 ```
 
 If you are not using maven, just run 'mvn clean install' and add the jar file to your classpath.
+Now the classes are added you just need to add the log4j properties that will set Couchbase log4j appender as your root logger.
+This is done by adding the following log4j.property file:
 
+```
+log4j.rootLogger=DEBUG, COUCHBASE
+log4j.appender.COUCHBASE=dk.braintrust.os.logger.CouchBaseLogAppender
+log4j.appender.COUCHBASE.hosts=localhost
+log4j.appender.COUCHBASE.port=8091
+log4j.appender.COUCHBASE.password=
+log4j.appender.COUCHBASE.defaultMetadataBucket=default
+log4j.appender.COUCHBASE.developmentMode=true
+log4j.appender.COUCHBASE.eviction=0
+log4j.appender.COUCHBASE.layout=dk.braintrust.os.logger.JsonEventLayout
+```
 
 After adding this, you can now use the logger, by using the normal log4j format, like e.g.:
-
 log.error("This is a fatal error!");
 
 ### Dataformat
