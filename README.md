@@ -61,6 +61,7 @@ The log will be persisted in the couchbase datastructure which will look somethi
   }
 }
 ```
+The layout is based somwhat on the work done at https://github.com/lusis/log4j-jsonevent-layout, so it is easially portable to and from logstash.
 
 ## TODO
 
