@@ -40,6 +40,8 @@ log4j.appender.COUCHBASE.eviction=0
 log4j.appender.COUCHBASE.layout=dk.braintrust.os.logger.JsonEventLayout
 ```
 
+Remember to  substitute your couchbase settings accordingly.
+
 After adding this, you can now use the logger, by using the normal log4j format, like e.g.:
 log.error("This is a fatal error!");
 
