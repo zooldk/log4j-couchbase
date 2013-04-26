@@ -71,7 +71,8 @@ The layout is based somwhat on the work done at https://github.com/lusis/log4j-j
 * Spread out the word to get feedback
 
 ## Contact
-
+```
 Steffen Larsen
 Email: mailto://zooldk@gmail.com
 IM (XMPP): xmpp://zooldk@gmail.com
+```
