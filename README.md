@@ -14,8 +14,7 @@ To use the force of couchbase to take structured data and make filters (map/redu
 
 
 ## Usage
-
-Use the logger by adding this to your maven pom.xml file:
+After adding your log4j into your classpath or pom.xml, you should add this log appender:
 
 ```xml
 <dependency>
@@ -25,9 +24,14 @@ Use the logger by adding this to your maven pom.xml file:
 </dependency>
 ```
 
-After that every time you do a log, like this:
+If you are not using maven, just run 'mvn clean install' and add the jar file to your classpath.
+
+
+After adding this, you can now use the logger, by using the normal log4j format, like e.g.:
 
 log.error("This is a fatal error!");
+
+### Dataformat
 
 The log will be persisted in the couchbase datastructure which will look something like this:
 
