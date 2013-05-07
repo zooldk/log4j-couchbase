@@ -7,11 +7,13 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.couchbase.client.CouchbaseClient;
 
 
+@Ignore
 public class TestCouchBaseLogAppender {
 	static Logger log = Logger.getLogger(TestCouchBaseLogAppender.class);
 	private static String hosts = "localhost";
@@ -23,20 +25,20 @@ public class TestCouchBaseLogAppender {
 	
 	@BeforeClass
 	public static void testSetup() throws IOException {
-		//uris.add(URI.create("http://" + hosts + ":" + port + "/pools"));
-		//client = new CouchbaseClient(uris, defaultMetadataBucket, password); 
+		uris.add(URI.create("http://" + hosts + ":" + port + "/pools"));
+		client = new CouchbaseClient(uris, defaultMetadataBucket, password); 
 	}
 	
 	@Test
 	public void testErrorLogger() {
-		//log.error("This is an error");
-		//log.error("This is an error with a stack!", new StackOverflowError("Craaaap"));
+		log.error("This is an error");
+		log.error("This is an error with a stack!", new StackOverflowError("Craaaap"));
 	}
 	
 	@Test
 	public void testInfoLogger() {
-		//log.info("This is a info message");
-		//log.info("This is a info message with a embedded message", new Throwable("Throw some tomatoes after couchbase!"));
+		log.info("This is a info message");
+		log.info("This is a info message with a embedded message", new Throwable("Throw some tomatoes after couchbase!"));
 	}
 	
 }
