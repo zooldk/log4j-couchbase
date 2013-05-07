@@ -1,7 +1,8 @@
 #log4j-couchbase
 ===============
 
-Version: 0.3.0
+Version: 0.3.2
+Status : [![Build Status](https://travis-ci.org/zooldk/log4j-couchbase.png?branch=master)](https://travis-ci.org/zooldk/log4j-couchbase)
 
 ## Description
 
