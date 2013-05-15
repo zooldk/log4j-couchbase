@@ -19,7 +19,7 @@ public class CouchBaseLogAppender extends AppenderSkeleton {
 	private int port = 8092;
 	private String password = "";
 	private String defaultMetadataBucket = "default";
-	private Boolean developmentMode = true;
+	private boolean developmentMode = true;
 	private int eviction = 0;
 	private CouchbaseClient client = null;
 	private static List<URI> uris = new LinkedList<URI>();
@@ -72,8 +72,12 @@ public class CouchBaseLogAppender extends AppenderSkeleton {
 		this.port = port;
 	}
 
-	public void setDevelopmentMode(Boolean developmentMode) {
+	public void setDevelopmentMode(boolean developmentMode) {
 		this.developmentMode = developmentMode;
+	}
+	
+	public void setEviction(int eviction) {
+		this.eviction = eviction;
 	}
 
 	public boolean requiresLayout() {
