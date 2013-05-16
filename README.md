@@ -12,8 +12,8 @@ The appender is based on Log4j version 1.x. New version of the appender that sui
 
 ### Supported Environments
 
-* Log4j 1.x
-* Couchbase server 2.x.x (currently using couchbase SDK 1.1.5)
+* Log4j 1.x - http://logging.apache.org/log4j/1.2
+* Couchbase server 2.x.x (currently using couchbase SDK 1.1.6) - http://couchbase.com
 
 ## Idea
 
