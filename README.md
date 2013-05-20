@@ -1,7 +1,7 @@
 #log4j-couchbase
 ===============
 
-Version: 0.3.2
+Version: 0.4.0
 
 Status : [![Build Status](https://travis-ci.org/zooldk/log4j-couchbase.png?branch=master)](https://travis-ci.org/zooldk/log4j-couchbase)
 
@@ -31,7 +31,7 @@ After adding your log4j into your classpath or pom.xml, you should add this log 
 </dependency>
 ```
 PS: It does not residing in any repositories yet, so you have to download the source and "mvn clean install" it firstly.
-Its on my todo list to put it into sonos repo.
+Its on my todo list to put it into sonatype repo.
 
 If you are not using maven, just run 'mvn clean install' and add the jar file to your classpath.
 Now the classes are added you just need to add the log4j properties that will set Couchbase log4j appender as your root logger.
