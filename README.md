@@ -30,6 +30,8 @@ After adding your log4j into your classpath or pom.xml, you should add this log 
 	<version>0.3.0-SNAPSHOT</version>
 </dependency>
 ```
+PS: It does not residing in any repositories yet, so you have to download the source and "mvn clean install" it firstly.
+Its on my todo list to put it into sonos repo.
 
 If you are not using maven, just run 'mvn clean install' and add the jar file to your classpath.
 Now the classes are added you just need to add the log4j properties that will set Couchbase log4j appender as your root logger.
@@ -85,11 +87,11 @@ The log will be persisted in the couchbase datastructure which will look somethi
 The layout is based somwhat on the work done at https://github.com/lusis/log4j-jsonevent-layout, so it is easially portable to and from logstash.
 
 ## TODO
-
-* Break up the json model further for the exceptions, to be able to make better maps and views in couchbase
-* Clean up code
-* Make prototype of GUI for testing out the maps and views
-* Spread out the word to get feedback
+* Put the project into sonotype repository so it is downloadable as a maven artifact (see http://jroller.com/holy/entry/releasing_a_project_to_maven).
+* Break up the json model further for the exceptions, to be able to make better maps and views in couchbase.
+* Clean up code.
+* Make prototype of GUI for testing out the maps and views.
+* Spread out the word to get feedback.
 
 ## Contact
 ```
