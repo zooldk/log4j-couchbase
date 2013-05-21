@@ -88,9 +88,9 @@ The layout is based somwhat on the work done at https://github.com/lusis/log4j-j
 
 ## TODO
 * ~~Put the project into sonotype repository so it is downloadable as a maven artifact (see http://jroller.com/holy/entry/releasing_a_project_to_maven).~~
+* ~~Make prototype of GUI for testing out the maps and views~~ -- not finished yet, but see https://github.com/zooldk/couchpotato .
 * Break up the json model further for the exceptions, to be able to make better maps and views in couchbase.
 * Clean up code.
-* Make prototype of GUI for testing out the maps and views.
 * Spread out the word to get feedback.
 
 ## Contact
