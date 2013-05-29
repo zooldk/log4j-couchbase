@@ -1,7 +1,5 @@
 package dk.braintrust.os.logger;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 

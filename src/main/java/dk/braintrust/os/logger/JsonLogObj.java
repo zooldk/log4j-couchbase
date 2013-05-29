@@ -7,11 +7,12 @@ import java.util.HashMap;
  *
  */
 public class JsonLogObj {
+	private String message;
+	private String source_host;
+	
 	private String clazz;
 	private String loggerName;
-	private String level;	
-	private String msg;
-	private String hostname;
+	private String level;		
 	private String thread;
 	private Long timestamp;
 	
@@ -20,10 +21,10 @@ public class JsonLogObj {
     private HashMap<String, Object> exceptionInformation;
 	
 	public String getHostname() {
-		return hostname;
+		return source_host;
 	}
 	public void setHostname(String hostname) {
-		this.hostname = hostname;
+		this.source_host = hostname;
 	}
 	public String getClazz() {
 		return clazz;
@@ -38,10 +39,10 @@ public class JsonLogObj {
 		this.level = level;
 	}
 	public String getMsg() {
-		return msg;
+		return message;
 	}
 	public void setMsg(String msg) {
-		this.msg = msg;
+		this.message = msg;
 	}
 	public String getThread() {
 		return thread;

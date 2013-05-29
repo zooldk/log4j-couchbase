@@ -89,8 +89,12 @@ The layout is based somwhat on the work done at https://github.com/lusis/log4j-j
 ## TODO
 * ~~Put the project into sonotype repository so it is downloadable as a maven artifact (see http://jroller.com/holy/entry/releasing_a_project_to_maven).~~
 * ~~Make prototype of GUI for testing out the maps and views~~ -- not finished yet, but see https://github.com/zooldk/couchpotato .
-* Break up the json model further for the exceptions, to be able to make better maps and views in couchbase.
+* Comply better to the Logstash datamodel (maybe 90% compliant at the moment). So you can freely export the data (with cbbackup) and move it to logstash.
+* Maybe store the log object into a temp memtable to be able to cont. pump log data.
 * Clean up code.
+* Massively test it to see if it holds water.
+* What shall the logger do if it gets disconencted some the cluster? log it to mem / a file and later store it?
+
 * Spread out the word to get feedback.
 
 ## Contact
