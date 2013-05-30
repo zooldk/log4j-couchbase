@@ -90,6 +90,7 @@ The layout is based somwhat on the work done at https://github.com/lusis/log4j-j
 * ~~Put the project into sonotype repository so it is downloadable as a maven artifact (see http://jroller.com/holy/entry/releasing_a_project_to_maven).~~
 * ~~Make prototype of GUI for testing out the maps and views~~ -- not finished yet, but see https://github.com/zooldk/couchpotato .
 * Comply better to the Logstash datamodel (maybe 90% compliant at the moment). So you can freely export the data (with cbbackup) and move it to logstash.
+* Make it possible to change the eviction time (TTL) for the log. Not all logs should be stored forever.
 * Maybe store the log object into a temp memtable to be able to cont. pump log data.
 * Clean up code.
 * Massively test it to see if it holds water.
