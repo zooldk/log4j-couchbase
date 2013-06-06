@@ -18,10 +18,10 @@ public class CouchBaseLogAppender extends AppenderSkeleton {
 	private String hosts = "localhost";
 	private int port = 8092;
 	private String password = "";
-	private String defaultMetadataBucket = "default";
+	private String loggingBucket = "default";
 	private boolean developmentMode = true;
 	private int eviction = 0;
-	private CouchbaseClient client = null;
+	private static CouchbaseClient client = null;
 	private static List<URI> uris = new LinkedList<URI>();
 
 	// private Map<String, String> messages; //TODO: store the log object into a
@@ -33,7 +33,8 @@ public class CouchBaseLogAppender extends AppenderSkeleton {
 		try {
 			client = setupCouchbase();
 		} catch (IOException e) {
-			e.printStackTrace();
+			e.printStackTrace();			
+			System.exit(-1);
 		}
 		// TODO: setup mem queue here..
 
@@ -47,7 +48,7 @@ public class CouchBaseLogAppender extends AppenderSkeleton {
 		for (String srv : couchServers) {
 			uris.add(URI.create("http://" + srv + ":" + port + "/pools"));
 		}
-		return new CouchbaseClient(uris, defaultMetadataBucket, password);
+		return new CouchbaseClient(uris, loggingBucket, password);
 	}
 
 	@Override
@@ -56,8 +57,8 @@ public class CouchBaseLogAppender extends AppenderSkeleton {
 		client.add(key, eviction, this.layout.format(event));
 	}
 
-	public void setDefaultMetadataBucket(String defaultMetadataBucket) {
-		this.defaultMetadataBucket = defaultMetadataBucket;
+	public void setLoggingBucket(String loggingBucket) {
+		this.loggingBucket = loggingBucket;
 	}
 
 	public void setHosts(String hosts) {
